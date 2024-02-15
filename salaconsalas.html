@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Botones con Imágenes</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Estilos personalizados */
+    html, body, footer {
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(183, 201, 235, 1), rgba(176, 226, 214, 1)) no-repeat;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #00008b; /* azul oscuro */
+        }
+
+        .navbar-brand {
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .form-container {
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .table-container {
+            padding: 40px;
+            border-radius: 10px;
+            max-height: 500px; /* Altura máxima */
+            overflow-y: auto; /* Desbordamiento vertical automático */
+        }
+        table {
+            background-color: rgba(255, 255, 255, 0.9); /* blanco transparente */
+        }
+    .salas {
+      margin-top: 50px; /* Reducido el margen superior */
+    }
+    .image-button {
+      border-color: #007bff; /* Color del borde */
+      border: 3px solid #007bff; /* Borde coloreado inicial */
+      transition: transform 0.3s; /* Transición suave para el zoom */
+    }
+    .image-button:hover {
+      transform: scale(1.1); /* Zoom al pasar el mouse */
+      cursor: pointer; /* Cambio de cursor al pasar el mouse */
+    }
+    .row {
+      margin-top: 20px; /* Espacio entre la fila y el contenido superior */
+    }
+  </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">Tu Logo</a>
+    </nav>
+    <div class="container text-center">
+        <h1>Selecciona una opción</h1>
+        <div class="salas">
+            <div class="row">
+              <div class="col-md-3">
+                <a href="pagina1.html">
+                  <img src="perfil.jpg" alt="Imagen 1" class="img-fluid rounded image-button">
+                </a>
+              </div>
+              <div class="col-md-3">
+                <a href="pagina2.html">
+                  <img src="perfil.jpg" alt="Imagen 2" class="img-fluid rounded image-button">
+                </a>
+                
+              </div>
+              <div class="col-md-3">
+                <a href="pagina3.html">
+                  <img src="perfil.jpg" alt="Imagen 3" class="img-fluid rounded image-button">
+                </a>
+              </div>
+              <div class="col-md-3">
+                <a href="pagina4.html">
+                  <img src="perfil.jpg" alt="Imagen 4" class="img-fluid rounded image-button">
+                </a>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <div class="modal" id="modalClient" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">Opción seleccionada</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body">
+              <p>La opción "Huey" está seleccionada.</p>
+              <a href="slalliure.html" class="btn btn-danger">Sí</a>
+              <a href="slalliure.html" class="btn btn-danger">No</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    <div class="modal" id="modalCon" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">Opción seleccionada</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body">
+              <p>Sala de concentracion.</p>
+              <a href="slalliure.html" class="btn btn-danger">Sí</a>
+              <a href="slalliure.html" class="btn btn-danger">No</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    <!-- Script para mostrar el modal si la opción 'client' está seleccionada -->
+    <script>
+        function mostrarModal() {
+            if (document.getElementById('client').checked) {
+                $('#modalClient').modal('show');
+            }
+            if (document.getElementById('concentracio').checked) {
+                $('#modalCon').modal('show');
+            }
+        }
+    </script>
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    </body>
+    
+</html>

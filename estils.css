@@ -1,0 +1,116 @@
+.seleccionat {
+    background-color: #07ffff ;
+}
+
+.table-container {
+    padding: 40px;
+    border-radius: 10px;
+    max-height: 500px; /* Altura máxima */
+    overflow-y: auto; /* Desbordamiento vertical automático */
+}
+table {
+    background-color: rgba(255, 255, 255, 0.9); /* blanco transparente */
+}
+
+.salas {
+margin-top: 200px; 
+}
+
+.image-button_O {
+border-color: red; /* Color del borde */
+border: 3px solid red; /* Borde coloreado inicial */
+transition: transform 0.3s, border 0.3s; /* Transición suave para el zoom y el borde */
+}
+
+.image-button_C {
+border-color: orange; /* Color del borde */
+border: 3px solid orange; /* Borde coloreado inicial */
+transition: transform 0.3s, border 0.3s; /* Transición suave para el zoom y el borde */
+}
+
+.image-button_L {
+border-color: blue; /* Color del borde */
+border: 3px solid blue; /* Borde coloreado inicial */
+transition: transform 0.3s, border 0.3s; /* Transición suave para el zoom y el borde */
+}
+
+.image-button_O:hover,
+.image-button_C:hover,
+.image-button_L:hover {
+transform: scale(1.1); /* Zoom al pasar el mouse */
+
+}
+
+.row {
+margin-top: 20px; /* Espacio entre la fila y el contenido superior */
+}
+.margen {
+margin-bottom: 120px;
+}
+.infoSala {
+text-align: right;
+margin-top: 15px;
+}
+.navbar {
+display: flex;
+align-items: center;
+background-color: #00008b; /* azul oscuro */
+}
+
+.logo {
+margin-right: 10px;
+width: 100px; /* Set the width as per your requirement */
+height: auto; /* Maintain aspect ratio */
+}
+
+.tancarSessio {
+color: white;
+display: flex;
+align-items: center;
+margin-left: 1110px; /* Añadido para mover los enlaces a la derecha */
+}
+
+.tancarSessio a {
+color: white;
+text-decoration: none;
+margin-left: 10px;
+}
+.margePerfil {
+    margin-top: -90px;
+}
+.dades {
+
+min-height: 400px; 
+max-width: 400px; /* Ajusta el valor según sea necesario */
+margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
+.dades img {
+    max-width: 200px;
+}
+html, body, footer {
+    height: 100%;
+    background: linear-gradient(to bottom, #80A3FE, #80FEF6 72%) no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-brand {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.form-container {
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.rectangle {
+    background-color: #D9D9D9;
+    margin: 10% auto; /* Agregar margen: 10% arriba y abajo, centrado horizontalmente */
+    padding: 80px; /* Agregar relleno */
+    border-radius: 10px; /* Agregar bordes redondeados */
+    max-width: 150%; /* Ancho máximo del 90% */
+}

@@ -5,46 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario y Tabla con Bootstrap</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        html, body, footer {
-            height: 100%;
-            background: linear-gradient(to bottom, rgba(183, 201, 235, 1), rgba(176, 226, 214, 1)) no-repeat;
-            background-size: cover;
-            margin: 0;
-            padding: 0;
-        }
-
-        .navbar {
-            background-color: #00008b; /* azul oscuro */
-        }
-
-        .navbar-brand {
-            color: #fff;
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        .form-container {
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
-        }
-
-        .table-container {
-            padding: 40px;
-            border-radius: 10px;
-            max-height: 500px; /* Altura máxima */
-            overflow-y: auto; /* Desbordamiento vertical automático */
-        }
-        table {
-            background-color: rgba(255, 255, 255, 0.9); /* blanco transparente */
-        }
-    </style>
+    <link href="./estils.css" rel="stylesheet" />
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark">
-    <a class="navbar-brand" href="#">Tu Logo</a>
-</nav>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <img class="logo" src="logoPocaPaga.png" alt="Imagen 1">
+        <a class="navbar-brand" href="salaconsalas.html">PocaPaga</a>
+        <div class="tancarSessio">
+          <a href="perfil.html">Benvingut, Usuari</a>
+          <a href="perfil.html">Tancar Sessió</a>
+        </div>
+      </nav>
 <div class="container h-100">
     <div class="row align-items-center justify-content-center h-100">
         <div class="col-md-6">
@@ -81,7 +52,6 @@
                 </form>
             </div>
             <br>
-            <button type="button" class="btn btn-primary" onclick="mostrarModal()">Guardar Reserva</button>
 
         </div>
         <div class="col-md-6">
@@ -108,41 +78,26 @@
             </div>
             <br>
             <button type="submit" class="btn btn-secondary">Borrar Reserva</button>
+            <button type="button" class="btn btn-primary" onclick="mostrarModal()">Guardar Reserva</button>
+
         </div>
     </div>
 </div>
 
 <!-- Modal -->
 <div class="modal" id="modalClient" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <!-- Modal Header -->
-      <div class="modal-header">
-        <h4 class="modal-title">Opción seleccionada</h4>
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-      </div>
-      <!-- Modal body -->
-      <div class="modal-body">
-        <p>La opción "Huey" está seleccionada.</p>
-        <a href="slalliure.html" class="btn btn-danger">Sí</a>
-        <a href="slalliure.html" class="btn btn-danger">No</a>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="modal" id="modalCon" tabindex="-1">
     <div class="modal-dialog">
       <div class="modal-content">
         <!-- Modal Header -->
         <div class="modal-header">
-          <h4 class="modal-title">Opción seleccionada</h4>
+          <h4 class="modal-title">Opció seleccionada</h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         <!-- Modal body -->
         <div class="modal-body">
-          <p>Sala de concentracion.</p>
-          <a href="slalliure.html" class="btn btn-danger">Sí</a>
-          <a href="slalliure.html" class="btn btn-danger">No</a>
+          <p>Reunió amb clients.</p>
+          <a href="salaconsalas.html" class="btn btn-danger">Sí</a>
+          <a href="salaconcentracio.html" class="btn btn-danger">No</a>
         </div>
       </div>
     </div>

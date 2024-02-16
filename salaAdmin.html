@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario y Tabla con Bootstrap</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="./estils.css" rel="stylesheet" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <img class="logo" src="logoPocaPaga.png" alt="Imagen 1">
+        <a class="navbar-brand" href="salaconsalas.html">PocaPaga</a>
+        <div class="tancarSessio">
+          <a href="perfil.html">Benvingut, Usuari</a>
+          <a href="perfil.html">Tancar Sessió</a>
+        </div>
+      </nav>
+<div class="container h-100">
+    <div class="row align-items-center justify-content-center h-100">
+        <div class="col-md-6">
+            <h1>Sala 1</h1>
+            <div class="form-container">
+                <h2>Formulario</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="horari">Franja Horaris:</label>
+                        <select id="horari" name="horari" class="form-control">
+                            <option value="9">9-10</option>
+                            <option value="10">9-10</option>
+                            <option value="11">9-10</option>
+                            <option value="12">9-10</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="data">Data:</label>
+                        <input type="date" class="form-control" name="data" id="data">
+                    </div>
+                    <div class="form-group">
+                        <fieldset>
+                            <legend>Sel·leciona una opció:</legend>
+                            <div>
+                              <input type="radio" id="client" name="opcio" value="huey" />
+                              <label for="client">Huey</label>
+                            </div>
+                            <div>
+                              <input type="radio" id="concentracio" name="opcio" value="dewey" />
+                              <label for="concentracio">Dewey</label>
+                            </div>
+                        </fieldset>
+                    </div>
+                </form>
+            </div>
+            <br>
+
+        </div>
+        <div class="col-md-6">
+            <div class="table-container">
+                <h2>Tabla de Reservas</h2>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Hora</th>
+                        <th>Data</th>
+                        <th>Tipus</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>2024-02-12</td>
+                        <td>2024-02-12</td>
+                        <td>10:00</td>
+                        <td>Juan</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-secondary">Borrar Reserva</button>
+            <button type="button" class="btn btn-primary" onclick="mostrarModal()">Guardar Reserva</button>
+
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal" id="modalClient" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Opció seleccionada</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          <p>Aplicara totes les sales</p>
+          <a href="salaconsalas.html" class="btn btn-danger">Sí</a>
+          <a href="salaconsalas.html" class="btn btn-danger">No</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Script para mostrar el modal si la opción 'client' está seleccionada -->
+<script>
+    function mostrarModal() {
+        if (document.getElementById('client').checked) {
+            $('#modalClient').modal('show');
+        }
+        if (document.getElementById('concentracio').checked) {
+            $('#modalCon').modal('show');
+        }
+    }
+</script>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

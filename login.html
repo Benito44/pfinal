@@ -1,60 +1,49 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario y Tabla con Bootstrap</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     <link href="./estils.css" rel="stylesheet" />
 </head>
+
 <body>
-<div class="container h-100">
-    <div class="row align-items-center justify-content-center h-100">
-        <div class="col-md-6">
-            <div class="rectangle">
-                <h1>Sala 1</h1>
-                <div class="form-container">
-                    <form>
+    <div class="container h-100">
+        <div class="row align-items-center justify-content-center h-100">
+            <div class="col-md-6 col-sm-12">
+                <div class="rectangle">
+                    <div class="logo-title-container">
+                        <h1>PocaPaga</h1>
+                        <img class="logoPerfil" src="logoPocaPaga.png" alt="Imagen 1">
+                    </div>
+                    <div class="form-container">
+                        <form>
                             <div class="form-group">
-                                <label for="horari">Franja Horaris:</label>
-                                <select id="horari" name="horari" class="form-control">
-                                    <option value="9">9-10</option>
-                                    <option value="10">9-10</option>
-                                    <option value="11">9-10</option>
-                                    <option value="12">9-10</option>
-                                </select>
+                                <label for="data">Data:</label>
+                                <input type="text" class="form-control" name="data" id="data">
                             </div>
                             <br>
-                            <div class="form-group ">
-                                <label for="data">Data:</label>
-                                <input type="date" class="form-control" name="data" id="data">
+                            <div class="form-group">
+                                <label for="data">Email:</label>
+                                <input type="email" class="form-control" name="data" id="data">
                             </div>
-
-                    </form>
+                        </form>
+                    </div>
+                    <br>
+                    <button type="button" class="btn btn-primary iniciSessio">Iniciar Sessió</button>
                 </div>
-                <br>
-                <button type="button" class="btn btn-primary" onclick="mostrarModal()">Guardar Reserva</button>
-    
             </div>
         </div>
     </div>
-</div>
-<!-- Script para mostrar el modal si la opción 'client' está seleccionada -->
-<script>
-    function mostrarModal() {
-        if (document.getElementById('client').checked) {
-            $('#modalClient').modal('show');
-        }
-        if (document.getElementById('concentracio').checked) {
-            $('#modalCon').modal('show');
-        }
-    }
-</script>
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
 
 </body>
+
 </html>

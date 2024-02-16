@@ -13,48 +13,46 @@
         <a class="navbar-brand" href="salaconsalas.html">PocaPaga</a>
         <div class="tancarSessio">
           <a href="perfil.html">Benvingut, Usuari</a>
-          <a href="perfil.html">Tancar Sessió</a>
+          <a href="login.html">Tancar Sessió</a>
         </div>
       </nav>
 <div class="container h-100">
     <div class="row align-items-center justify-content-center h-100">
-        <div class="col-md-6">
-            <h1>Sala 1</h1>
+        <div class="col-md-6 col-sm-12">
             <div class="form-container">
-                <h2>Formulario</h2>
-                <form>
-                    <div class="form-group">
-                        <label for="horari">Franja Horaris:</label>
-                        <select id="horari" name="horari" class="form-control">
-                            <option value="9">9-10</option>
-                            <option value="10">9-10</option>
-                            <option value="11">9-10</option>
-                            <option value="12">9-10</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="data">Data:</label>
-                        <input type="date" class="form-control" name="data" id="data">
-                    </div>
-                    <div class="form-group">
-                        <fieldset>
-                            <legend>Sel·leciona una opció:</legend>
-                            <div>
-                              <input type="radio" id="client" name="opcio" value="huey" />
-                              <label for="client">Huey</label>
-                            </div>
-                            <div>
-                              <input type="radio" id="concentracio" name="opcio" value="dewey" />
-                              <label for="concentracio">Dewey</label>
-                            </div>
-                        </fieldset>
-                    </div>
-                </form>
+                <div class="formulariPosicionament">
+                    <h1>Formulario</h1>
+                    <form>
+                        <div class="form-group">
+                            <label for="horari">Franja Horaris:</label>
+                            <select required id="horari" name="horari" class="form-control">
+                                <option value="9">9-10</option>
+                                <option value="10">9-10</option>
+                                <option value="11">9-10</option>
+                                <option value="12">9-10</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="data">Data:</label>
+                            <input required type="date" class="form-control" name="data" id="data">
+                        </div>
+                        <div class="form-group">
+                            <fieldset>
+                                <legend>Sel·leciona una opció:</legend>
+                                <div>
+                                  <input required type="radio" id="client" name="opcio" value="huey" />
+                                  <label for="client">Huey</label>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </form>
+    
+                </div>
             </div>
             <br>
 
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 col-sm-12">
             <div class="table-container">
                 <h2>Tabla de Reservas</h2>
                 <table class="table">
@@ -77,8 +75,8 @@
                 </table>
             </div>
             <br>
-            <button type="submit" class="btn btn-secondary">Borrar Reserva</button>
-            <button type="button" class="btn btn-primary" onclick="mostrarModal()">Guardar Reserva</button>
+            <button type="submit" class="btn btn-block btn-secondary">Borrar Reserva</button>
+            <button type="button" class="btn btn-block btn-primary" onclick="mostrarModal()">Guardar Reserva</button>
 
         </div>
     </div>
@@ -95,9 +93,9 @@
         </div>
         <!-- Modal body -->
         <div class="modal-body">
-          <p>Aplicara totes les sales</p>
-          <a href="salaconsalas.html" class="btn btn-danger">Sí</a>
-          <a href="salaconsalas.html" class="btn btn-danger">No</a>
+          <p>Reunió amb clients.</p>
+          <a href="salaconsalas.html" class="btn btn-block btn-danger">Sí</a>
+          <a href="salaconcentracio.html" class="btn btn-block btn-danger">No</a>
         </div>
       </div>
     </div>

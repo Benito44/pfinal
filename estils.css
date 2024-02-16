@@ -11,7 +11,9 @@
 table {
     background-color: rgba(255, 255, 255, 0.9); /* blanco transparente */
 }
-
+.formulariPosicionament {
+    margin-bottom: 100px;
+}
 .salas {
 margin-top: 200px; 
 }
@@ -44,12 +46,26 @@ transform: scale(1.1); /* Zoom al pasar el mouse */
 .row {
 margin-top: 20px; /* Espacio entre la fila y el contenido superior */
 }
+.logo-title-container {
+    display: flex;
+    align-items: center;
+}
 .margen {
 margin-bottom: 120px;
 }
+.logoPerfil {
+    width: 100px; /* Set the width as per your requirement */
+    height: auto; /* Maintain aspect ratio */
+    float: right; /* Coloca la imagen a la derecha */
+    margin-left: 110px;
+}
+
 .infoSala {
 text-align: right;
 margin-top: 15px;
+}
+.iniciSessio {
+    margin-left: 230px
 }
 .navbar {
 display: flex;
@@ -67,7 +83,7 @@ height: auto; /* Maintain aspect ratio */
 color: white;
 display: flex;
 align-items: center;
-margin-left: 1110px; /* Añadido para mover los enlaces a la derecha */
+margin-left: 1110px;
 }
 
 .tancarSessio a {

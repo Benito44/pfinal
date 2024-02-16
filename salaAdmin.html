@@ -10,7 +10,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
         <img class="logo" src="logoPocaPaga.png" alt="Imagen 1">
-        <a class="navbar-brand" href="salaconsalas.html">PocaPaga</a>
+        <a class="navbar-brand pocapaga" href="salaconsalas.html">PocaPaga</a>
         <div class="tancarSessio">
           <a href="perfil.html">Benvingut, Usuari</a>
           <a href="login.html">Tancar Sessió</a>
@@ -40,8 +40,8 @@
                             <fieldset>
                                 <legend>Sel·leciona una opció:</legend>
                                 <div>
-                                  <input required type="radio" id="client" name="opcio" value="huey" />
-                                  <label for="client">Huey</label>
+                                  <input required type="checkbox" id="client" name="opcio" value="Aplicar" />
+                                  <label for="client">Aplicar a sales restants</label>
                                 </div>
                             </fieldset>
                         </div>
@@ -66,16 +66,16 @@
                     </thead>
                     <tbody>
                     <tr>
-                        <td>2024-02-12</td>
+                        <td>Benito Martinez</td>
                         <td>2024-02-12</td>
                         <td>10:00</td>
-                        <td>Juan</td>
+                        <td>Client</td>
                     </tr>
                     </tbody>
                 </table>
             </div>
             <br>
-            <button type="submit" class="btn btn-block btn-secondary">Borrar Reserva</button>
+            <button type="submit" class="btn btn-block btn-secondary" onclick="modalBorrar()">Borrar Reserva</button>
             <button type="button" class="btn btn-block btn-primary" onclick="mostrarModal()">Guardar Reserva</button>
 
         </div>
@@ -93,9 +93,27 @@
         </div>
         <!-- Modal body -->
         <div class="modal-body">
-          <p>Reunió amb clients.</p>
+          <p>Aplicar a totes les sales restants? </p>
           <a href="salaconsalas.html" class="btn btn-block btn-danger">Sí</a>
-          <a href="salaconcentracio.html" class="btn btn-block btn-danger">No</a>
+          <a href="salaconsalas.html" class="btn btn-block btn-danger">No</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="modalBorr" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Opció seleccionada</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          <p>Vols borrar la reserva anterior?
+            Es borrarà permanentment.</p>
+          <a href="salaconsalas.html" class="btn btn-block btn-danger">Sí</a>
+          <a href="salaAdmin.html" class="btn btn-block btn-danger">No</a>
         </div>
       </div>
     </div>
@@ -110,6 +128,9 @@
         if (document.getElementById('concentracio').checked) {
             $('#modalCon').modal('show');
         }
+    }
+    function modalBorrar() {
+      $('#modalBorr').modal('show');
     }
 </script>
 

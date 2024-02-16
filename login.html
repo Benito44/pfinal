@@ -17,13 +17,13 @@
             <div class="col-md-6 col-sm-12">
                 <div class="rectangle">
                     <div class="logo-title-container">
-                        <h1>PocaPaga</h1>
+                        <h1 class="pocapaga">PocaPaga</h1>
                         <img class="logoPerfil" src="logoPocaPaga.png" alt="Imagen 1">
                     </div>
                     <div class="form-container">
                         <form>
                             <div class="form-group">
-                                <label for="data">Data:</label>
+                                <label for="data">Usuari:</label>
                                 <input type="text" class="form-control" name="data" id="data">
                             </div>
                             <br>
@@ -34,7 +34,13 @@
                         </form>
                     </div>
                     <br>
-                    <button type="button" class="btn btn-primary iniciSessio">Iniciar Sessió</button>
+                    <form action="./salaconsalas.html">
+                        <button type="submit" class="btn btn-primary iniciSessio">Iniciar Sessió</button>
+                    </form>
+                    <br>
+                    <form action="./salaAdmin.html">
+                        <button type="submit" class="btn btn-primary iniciSessio">Administrador</button>
+                    </form>
                 </div>
             </div>
         </div>

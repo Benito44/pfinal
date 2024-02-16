@@ -79,6 +79,15 @@ width: 100px; /* Set the width as per your requirement */
 height: auto; /* Maintain aspect ratio */
 }
 
+    @font-face {
+        font-family: 'Gellisto';
+        src: url('Gellisto.ttf') format('truetype');
+    }
+
+    .pocapaga {
+        font-family: 'Gellisto', sans-serif;
+    }
+
 .tancarSessio {
 color: white;
 display: flex;
@@ -95,7 +104,7 @@ margin-left: 10px;
     margin-top: -90px;
 }
 .dades {
-
+background-color: #f1f1f1;
 min-height: 400px; 
 max-width: 400px; /* Ajusta el valor según sea necesario */
 margin: 0 auto; /* Centra el contenedor horizontalmente */
